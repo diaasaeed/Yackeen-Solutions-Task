@@ -38,6 +38,11 @@
 		01A5065C2776F047000FCC23 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5065B2776F047000FCC23 /* SplashVC.swift */; };
 		01A506652776F569000FCC23 /* ShowMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A506632776F569000FCC23 /* ShowMainCell.swift */; };
 		01A506662776F569000FCC23 /* ShowMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A506642776F569000FCC23 /* ShowMainCell.xib */; };
+		01A5067627770859000FCC23 /* ShowDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5067527770859000FCC23 /* ShowDetailsVC.swift */; };
+		01A5067E27770863000FCC23 /* ShowDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5067D27770863000FCC23 /* ShowDetailsPresenter.swift */; };
+		01A506832777086E000FCC23 /* ShowDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A506822777086E000FCC23 /* ShowDetailsInteractor.swift */; };
+		01A5068827770881000FCC23 /* ShowDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5068727770881000FCC23 /* ShowDetailsRouter.swift */; };
+		01A506902777088D000FCC23 /* ShowDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5068F2777088D000FCC23 /* ShowDetailsProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +100,11 @@
 		01A5065B2776F047000FCC23 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		01A506632776F569000FCC23 /* ShowMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMainCell.swift; sourceTree = "<group>"; };
 		01A506642776F569000FCC23 /* ShowMainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowMainCell.xib; sourceTree = "<group>"; };
+		01A5067527770859000FCC23 /* ShowDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsVC.swift; sourceTree = "<group>"; };
+		01A5067D27770863000FCC23 /* ShowDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsPresenter.swift; sourceTree = "<group>"; };
+		01A506822777086E000FCC23 /* ShowDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsInteractor.swift; sourceTree = "<group>"; };
+		01A5068727770881000FCC23 /* ShowDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsRouter.swift; sourceTree = "<group>"; };
+		01A5068F2777088D000FCC23 /* ShowDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,8 +186,9 @@
 		01A5058A2776D8BC000FCC23 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				01A5065A2776F036000FCC23 /* Splash */,
+				01A5067427770835000FCC23 /* Show Details */,
 				01A506342776E5CD000FCC23 /* Main Screen */,
+				01A5065A2776F036000FCC23 /* Splash */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -299,6 +310,18 @@
 				01A506632776F569000FCC23 /* ShowMainCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		01A5067427770835000FCC23 /* Show Details */ = {
+			isa = PBXGroup;
+			children = (
+				01A5067527770859000FCC23 /* ShowDetailsVC.swift */,
+				01A5067D27770863000FCC23 /* ShowDetailsPresenter.swift */,
+				01A506822777086E000FCC23 /* ShowDetailsInteractor.swift */,
+				01A5068727770881000FCC23 /* ShowDetailsRouter.swift */,
+				01A5068F2777088D000FCC23 /* ShowDetailsProtocol.swift */,
+			);
+			path = "Show Details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,9 +456,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				01A506482776E633000FCC23 /* MainScreenRouter.swift in Sources */,
+				01A5068827770881000FCC23 /* ShowDetailsRouter.swift in Sources */,
 				01A505DA2776D9E8000FCC23 /* CollectionViewCellEX.swift in Sources */,
 				01A506362776E5F6000FCC23 /* MainScreenVC.swift in Sources */,
 				01A5061E2776DB29000FCC23 /* enums.swift in Sources */,
+				01A5067E27770863000FCC23 /* ShowDetailsPresenter.swift in Sources */,
 				01A5062D2776DCA4000FCC23 /* API Request.swift in Sources */,
 				01A5065C2776F047000FCC23 /* SplashVC.swift in Sources */,
 				01A506212776DB29000FCC23 /* Protocols.swift in Sources */,
@@ -443,17 +468,20 @@
 				01A506202776DB29000FCC23 /* Images Helper.swift in Sources */,
 				01A505D92776D9E8000FCC23 /* viewControllerEX.swift in Sources */,
 				01A505522776D832000FCC23 /* AppDelegate.swift in Sources */,
+				01A506832777086E000FCC23 /* ShowDetailsInteractor.swift in Sources */,
 				01A505E72776D9E9000FCC23 /* DoubleEX.swift in Sources */,
 				01A5061F2776DB29000FCC23 /* Classes.swift in Sources */,
 				01A5064D2776E640000FCC23 /* MainScreenProtocol.swift in Sources */,
 				01A505E52776D9E9000FCC23 /* imageViewEX.swift in Sources */,
 				01A505E92776D9E9000FCC23 /* viewEX.swift in Sources */,
+				01A506902777088D000FCC23 /* ShowDetailsProtocol.swift in Sources */,
 				01A5063E2776E61A000FCC23 /* MainScreenPresenter.swift in Sources */,
 				01A506532776E994000FCC23 /* MainScreenModel.swift in Sources */,
 				01A505E12776D9E9000FCC23 /* navigationEXswift.swift in Sources */,
 				01A505DD2776D9E8000FCC23 /* encodableEX.swift in Sources */,
 				01A5061C2776DB29000FCC23 /* Scenes helper.swift in Sources */,
 				01A5061D2776DB29000FCC23 /* Constants.swift in Sources */,
+				01A5067627770859000FCC23 /* ShowDetailsVC.swift in Sources */,
 				01A505EB2776D9E9000FCC23 /* StringEX.swift in Sources */,
 				01A506652776F569000FCC23 /* ShowMainCell.swift in Sources */,
 				01A5055C2776D832000FCC23 /* YSolutionsTask.xcdatamodeld in Sources */,

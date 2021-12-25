@@ -16,35 +16,45 @@ static let sharedInstance = API()
         request.httpMethod = "GET"
         print("URL IS : \(request)")
 
-
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            let statusCode =  response as? HTTPURLResponse
-
-            if let error = error {
-                print("Error 1 is",error.localizedDescription)
-                onCompletion(nil, statusCode?.statusCode ?? 0, error)
+        DispatchQueue.global(qos: .background).async {
                 
-            } else {
-                guard let data = data else {  return  }
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                let statusCode =  response as? HTTPURLResponse
 
-                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 200 {
-                    do {
-                        let jsonData = try JSONDecoder().decode(T.self, from: data)
-                        print("Json is",jsonData)
-                        onCompletion(jsonData, statusCode?.statusCode ?? 0, nil)
-
-                    } catch let error as NSError {
-                        print("Error 2 is",error.localizedDescription)
-
+                if let error = error {
+                    DispatchQueue.main.async {
+                        print("Error 1 is",error.localizedDescription)
                         onCompletion(nil, statusCode?.statusCode ?? 0, error)
                     }
                 } else {
-                    print("Error 3 is",error?.localizedDescription ?? "")
-                    onCompletion(nil, statusCode?.statusCode ?? 0, error)
+                    guard let data = data else {  return  }
+
+                    if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 200 {
+                        do {
+                            let jsonData = try JSONDecoder().decode(T.self, from: data)
+                            print("Json is",jsonData)
+                            DispatchQueue.main.async {
+                                onCompletion(jsonData, statusCode?.statusCode ?? 0, nil)
+                            }
+
+                        } catch let error as NSError {
+                            DispatchQueue.main.async {
+                                print("Error 2 is",error.localizedDescription)
+                                onCompletion(nil, statusCode?.statusCode ?? 0, error)
+                            }
+                  
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            print("Error 2 is",error?.localizedDescription)
+                            onCompletion(nil, statusCode?.statusCode ?? 0, error)
+                        }
+                    }
                 }
             }
+            
+            task.resume()
         }
-        task.resume()
     }
 
 

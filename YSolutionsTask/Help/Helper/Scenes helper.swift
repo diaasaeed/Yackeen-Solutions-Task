@@ -29,5 +29,6 @@ enum StoryBoards: String {
 enum ViewControllers: String {
     
     case MainScreenVC = "MainScreenVC"
+    case ShowDetailsVC = "ShowDetailsVC"
 
  }

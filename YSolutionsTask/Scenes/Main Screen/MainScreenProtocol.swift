@@ -15,7 +15,10 @@ protocol MainScreenViewProtocol {
 protocol MainScreenPresenterProtocol {
     var view:MainScreenViewProtocol? {get set}
     func requestSearch(txt:String)
-
+    func configuerCell(cell:ShowMainCellProtocol,index:Int)
+    func getURLShow(index:Int)->String
+    func countShow()->Int
+    func Select(at index:Int)
 }
 
 protocol MainScreenInteractorInputProtocol {
@@ -28,5 +31,5 @@ protocol MainScreenInteractorOutputProtocol {
 }
 
 protocol MainScreenRouterProtocol  {
-    
+    func openShow(urlShow:String)
 }

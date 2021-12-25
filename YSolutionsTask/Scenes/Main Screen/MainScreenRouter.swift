@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 class MainScreenRouter{
     
+    var VC : MainScreenViewProtocol?
+
     static func createModule()-> UIViewController{
         
         let view = SetStoryBoard.controller(controller: Helper(Story: .Main, VC: .MainScreenVC)) as! MainScreenVC
@@ -22,5 +24,13 @@ class MainScreenRouter{
         interactor.presnter = presenter
         
         return view
+    }
+    
+    
+    func openShow(urlShow:String){
+        let detail = ShowDetailsRouter.createModule(urlShow: urlShow) as! ShowDetailsVC
+        if let vc = VC as? UIViewController{
+            vc.navigationController?.pushViewController(detail, animated: true)
+        }
     }
 }
