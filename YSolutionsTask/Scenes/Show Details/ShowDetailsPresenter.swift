@@ -13,7 +13,7 @@ class ShowDetailsPresenter:ShowDetailsPresenterProtocol , ShowDetailsInteractorO
     var router:ShowDetailsRouterProtocol?
     var interactor:ShowDetailsInteractorInputProtocol?
     var error:ErrorProtocol?
-    var showArray:MainScreenModelElement?
+    var showDetails:Show?
     var showURL = String()
     
     init(view: ShowDetailsViewProtocol,
@@ -32,9 +32,25 @@ class ShowDetailsPresenter:ShowDetailsPresenterProtocol , ShowDetailsInteractorO
     }
     
     
-    func getDataShow(model: MainScreenModelElement) {
-        self.showArray = model
+    func getDataShow(model: Show) {
+        self.showDetails = model
         self.view?.reloadData()
     }
     
+    
+    func configuerImage(cell:ImageShowDetailsCellProtocol){
+        cell.image(url: self.showDetails?.image?.original ?? "")
+    }
+    
+    func configuerInfo(cell:InfoShowCellProtocol){
+        cell.endDate(date: showDetails?.ended ?? "")
+        cell.startDate(date: showDetails?.premiered ?? "")
+        cell.lang(txt: showDetails?.language ?? "")
+        cell.titleShow(title: showDetails?.name ?? "")
+        cell.runtimeShow(title: "\(showDetails?.runtime ?? 0)")
+    }
+    
+    func configuerSummary(cell:SummaryShowCellProtocol){
+        cell.summaryShow(txt: showDetails?.summary ?? "")
+    }
 }

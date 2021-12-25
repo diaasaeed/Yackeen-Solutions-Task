@@ -8,12 +8,12 @@
 import Foundation
 
 class ShowDetailsInteractor:ShowDetailsInteractorInputProtocol{
+    
     var presnter: ShowDetailsInteractorOutpotProtocol?
     var error: ErrorProtocol?
-
     
     func sendRquestShowDetails(url:String){
-        API.sharedInstance.getRequest(url: url) {  [weak self] (data:MainScreenModelElement?, statusCode, error) in
+        API.sharedInstance.getRequest(url: url) {  [weak self] (data:Show?, statusCode, error) in
             if let error = error{
                 ErrorHandler.handler(error: error, statusCode: statusCode) { (localizedError) in
                     self?.error?.featching(error: localizedError)

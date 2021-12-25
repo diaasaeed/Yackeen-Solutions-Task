@@ -21,7 +21,7 @@ struct Helper{
 
 /// enum responsible for store storybords names
 enum StoryBoards: String {
-    // ---- Splash ----
+
     case Main = "Main"
 
 }

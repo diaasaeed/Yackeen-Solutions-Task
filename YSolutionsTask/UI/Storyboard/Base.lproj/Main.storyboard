@@ -62,6 +62,45 @@
             </objects>
             <point key="canvasLocation" x="141" y="81"/>
         </scene>
+        <!--Show DetailsVC-->
+        <scene sceneID="R9X-oa-HD4">
+            <objects>
+                <viewController storyboardIdentifier="ShowDetailsVC" id="2dV-PR-Tf0" customClass="ShowDetailsVC" customModule="YSolutionsTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IHs-Wd-j8L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LC1-Mc-Hdw">
+                                <rect key="frame" x="0.0" y="54" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Wij-6b-HrW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="2dV-PR-Tf0" id="GZK-iO-gKX"/>
+                                    <outlet property="delegate" destination="2dV-PR-Tf0" id="OU9-uX-ahQ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="efP-Di-36o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="efP-Di-36o" firstAttribute="bottom" secondItem="LC1-Mc-Hdw" secondAttribute="bottom" id="NLj-fg-Ev4"/>
+                            <constraint firstItem="efP-Di-36o" firstAttribute="trailing" secondItem="LC1-Mc-Hdw" secondAttribute="trailing" id="cGI-Of-9SF"/>
+                            <constraint firstItem="LC1-Mc-Hdw" firstAttribute="top" secondItem="efP-Di-36o" secondAttribute="top" constant="10" id="eQ2-Br-SwR"/>
+                            <constraint firstItem="LC1-Mc-Hdw" firstAttribute="leading" secondItem="efP-Di-36o" secondAttribute="leading" id="pNF-wg-R0d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="showDetailsTableView" destination="LC1-Mc-Hdw" id="GsJ-07-U0c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCK-OG-OZJ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848" y="80"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

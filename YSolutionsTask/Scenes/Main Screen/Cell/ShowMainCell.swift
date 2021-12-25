@@ -41,9 +41,7 @@ class ShowMainCell: UITableViewCell ,ShowMainCellProtocol{
               self.imageShow.image = UIImage(data: data)
             }
         }
-         
- 
-    }
+      }
     
     func titleShow(title: String) {
         self.titleShowLable.text = title

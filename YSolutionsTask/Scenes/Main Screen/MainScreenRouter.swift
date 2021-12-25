@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-class MainScreenRouter{
+class MainScreenRouter:MainScreenRouterProtocol{
     
     var VC : MainScreenViewProtocol?
 
@@ -32,5 +32,5 @@ class MainScreenRouter{
         if let vc = VC as? UIViewController{
             vc.navigationController?.pushViewController(detail, animated: true)
         }
-    }
+     }
 }

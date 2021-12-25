@@ -10,13 +10,13 @@ import Foundation
 class MainScreenPresenter:MainScreenPresenterProtocol , MainScreenInteractorOutputProtocol{
   
     var view: MainScreenViewProtocol?
-    var router:MainScreenRouter?
+    var router:MainScreenRouterProtocol?
     var interactor:MainScreenInteractorInputProtocol?
     var error:ErrorProtocol?
     var showArray = [MainScreenModelElement]()
     
     init(view: MainScreenViewProtocol,
-         router:MainScreenRouter,
+         router:MainScreenRouterProtocol,
          interactor:MainScreenInteractorInputProtocol,
          error:ErrorProtocol) {
         self.view = view

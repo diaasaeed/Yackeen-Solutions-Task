@@ -43,6 +43,12 @@
 		01A506832777086E000FCC23 /* ShowDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A506822777086E000FCC23 /* ShowDetailsInteractor.swift */; };
 		01A5068827770881000FCC23 /* ShowDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5068727770881000FCC23 /* ShowDetailsRouter.swift */; };
 		01A506902777088D000FCC23 /* ShowDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5068F2777088D000FCC23 /* ShowDetailsProtocol.swift */; };
+		01A50698277710B9000FCC23 /* ImageShowDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A50696277710B9000FCC23 /* ImageShowDetailsCell.swift */; };
+		01A50699277710B9000FCC23 /* ImageShowDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A50697277710B9000FCC23 /* ImageShowDetailsCell.xib */; };
+		01A506A6277711D1000FCC23 /* InfoShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A506A4277711D1000FCC23 /* InfoShowCell.swift */; };
+		01A506A7277711D1000FCC23 /* InfoShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A506A5277711D1000FCC23 /* InfoShowCell.xib */; };
+		01A506B0277714FC000FCC23 /* SummaryShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A506AE277714FC000FCC23 /* SummaryShowCell.swift */; };
+		01A506B1277714FC000FCC23 /* SummaryShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A506AF277714FC000FCC23 /* SummaryShowCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +111,12 @@
 		01A506822777086E000FCC23 /* ShowDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsInteractor.swift; sourceTree = "<group>"; };
 		01A5068727770881000FCC23 /* ShowDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsRouter.swift; sourceTree = "<group>"; };
 		01A5068F2777088D000FCC23 /* ShowDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsProtocol.swift; sourceTree = "<group>"; };
+		01A50696277710B9000FCC23 /* ImageShowDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageShowDetailsCell.swift; sourceTree = "<group>"; };
+		01A50697277710B9000FCC23 /* ImageShowDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageShowDetailsCell.xib; sourceTree = "<group>"; };
+		01A506A4277711D1000FCC23 /* InfoShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoShowCell.swift; sourceTree = "<group>"; };
+		01A506A5277711D1000FCC23 /* InfoShowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoShowCell.xib; sourceTree = "<group>"; };
+		01A506AE277714FC000FCC23 /* SummaryShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryShowCell.swift; sourceTree = "<group>"; };
+		01A506AF277714FC000FCC23 /* SummaryShowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryShowCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +217,8 @@
 		01A505B12776D903000FCC23 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
-				01A506642776F569000FCC23 /* ShowMainCell.xib */,
+				01A506952777109F000FCC23 /* Show Details */,
+				01A5069427771096000FCC23 /* Main Screen */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -315,6 +328,7 @@
 		01A5067427770835000FCC23 /* Show Details */ = {
 			isa = PBXGroup;
 			children = (
+				01A506A0277710BD000FCC23 /* Cell */,
 				01A5067527770859000FCC23 /* ShowDetailsVC.swift */,
 				01A5067D27770863000FCC23 /* ShowDetailsPresenter.swift */,
 				01A506822777086E000FCC23 /* ShowDetailsInteractor.swift */,
@@ -322,6 +336,34 @@
 				01A5068F2777088D000FCC23 /* ShowDetailsProtocol.swift */,
 			);
 			path = "Show Details";
+			sourceTree = "<group>";
+		};
+		01A5069427771096000FCC23 /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				01A506642776F569000FCC23 /* ShowMainCell.xib */,
+			);
+			path = "Main Screen";
+			sourceTree = "<group>";
+		};
+		01A506952777109F000FCC23 /* Show Details */ = {
+			isa = PBXGroup;
+			children = (
+				01A50697277710B9000FCC23 /* ImageShowDetailsCell.xib */,
+				01A506A5277711D1000FCC23 /* InfoShowCell.xib */,
+				01A506AF277714FC000FCC23 /* SummaryShowCell.xib */,
+			);
+			path = "Show Details";
+			sourceTree = "<group>";
+		};
+		01A506A0277710BD000FCC23 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				01A506AE277714FC000FCC23 /* SummaryShowCell.swift */,
+				01A50696277710B9000FCC23 /* ImageShowDetailsCell.swift */,
+				01A506A4277711D1000FCC23 /* InfoShowCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,7 +472,10 @@
 				01A505612776D836000FCC23 /* LaunchScreen.storyboard in Resources */,
 				01A5055E2776D836000FCC23 /* Assets.xcassets in Resources */,
 				01A505592776D832000FCC23 /* Main.storyboard in Resources */,
+				01A50699277710B9000FCC23 /* ImageShowDetailsCell.xib in Resources */,
+				01A506A7277711D1000FCC23 /* InfoShowCell.xib in Resources */,
 				01A506662776F569000FCC23 /* ShowMainCell.xib in Resources */,
+				01A506B1277714FC000FCC23 /* SummaryShowCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,8 +523,11 @@
 				01A5063E2776E61A000FCC23 /* MainScreenPresenter.swift in Sources */,
 				01A506532776E994000FCC23 /* MainScreenModel.swift in Sources */,
 				01A505E12776D9E9000FCC23 /* navigationEXswift.swift in Sources */,
+				01A50698277710B9000FCC23 /* ImageShowDetailsCell.swift in Sources */,
 				01A505DD2776D9E8000FCC23 /* encodableEX.swift in Sources */,
+				01A506B0277714FC000FCC23 /* SummaryShowCell.swift in Sources */,
 				01A5061C2776DB29000FCC23 /* Scenes helper.swift in Sources */,
+				01A506A6277711D1000FCC23 /* InfoShowCell.swift in Sources */,
 				01A5061D2776DB29000FCC23 /* Constants.swift in Sources */,
 				01A5067627770859000FCC23 /* ShowDetailsVC.swift in Sources */,
 				01A505EB2776D9E9000FCC23 /* StringEX.swift in Sources */,

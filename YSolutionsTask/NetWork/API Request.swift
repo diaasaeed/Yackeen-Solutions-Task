@@ -20,7 +20,7 @@ static let sharedInstance = API()
                 
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 let statusCode =  response as? HTTPURLResponse
-
+                print("Status Code is",statusCode?.statusCode ?? 0)
                 if let error = error {
                     DispatchQueue.main.async {
                         print("Error 1 is",error.localizedDescription)
@@ -32,8 +32,8 @@ static let sharedInstance = API()
                     if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 200 {
                         do {
                             let jsonData = try JSONDecoder().decode(T.self, from: data)
-                            print("Json is",jsonData)
                             DispatchQueue.main.async {
+                            print("Json is",jsonData)
                                 onCompletion(jsonData, statusCode?.statusCode ?? 0, nil)
                             }
 

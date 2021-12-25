@@ -46,19 +46,19 @@ class MainScreenVC: UIViewController,MainScreenViewProtocol,ErrorProtocol {
 
 extension MainScreenVC :UITableViewDataSource , UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("count --->", self.presenter?.countShow() ?? 0)
         return self.presenter?.countShow() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.showTableView.dequeueReusableCell(withIdentifier: "ShowMainCell", for: indexPath) as! ShowMainCell
-        
         self.presenter?.configuerCell(cell: cell, index: indexPath.row)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.presenter?.Select(at: indexPath.row)
+        let urlShow = self.presenter?.getURLShow(index: indexPath.row) ?? ""
+        let detail = ShowDetailsRouter.createModule(urlShow: urlShow) as! ShowDetailsVC
+        self.navigationController?.pushViewController(detail, animated: true)
     }
     
     

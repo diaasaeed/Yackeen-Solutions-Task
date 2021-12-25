@@ -16,6 +16,9 @@ protocol ShowDetailsViewProtocol {
 protocol ShowDetailsPresenterProtocol {
     var view:ShowDetailsViewProtocol? {get set}
     func viewDidLoad()
+    func configuerImage(cell:ImageShowDetailsCellProtocol)
+    func configuerInfo(cell:InfoShowCellProtocol)
+    func configuerSummary(cell:SummaryShowCellProtocol)
 }
 
 protocol ShowDetailsInteractorInputProtocol {
@@ -24,11 +27,11 @@ protocol ShowDetailsInteractorInputProtocol {
 }
 
 protocol ShowDetailsInteractorOutpotProtocol {
-    func getDataShow(model:MainScreenModelElement)
+    func getDataShow(model:Show)
 
 }
 
 protocol ShowDetailsRouterProtocol {
-     
+     //TODO:- 
 }
 
