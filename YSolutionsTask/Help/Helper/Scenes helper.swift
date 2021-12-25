@@ -22,12 +22,13 @@ struct Helper{
 /// enum responsible for store storybords names
 enum StoryBoards: String {
     // ---- Splash ----
-    case Auth = "Main"
+    case Main = "Main"
 
 }
 /// enum responsible for store view controllers names
 enum ViewControllers: String {
     
+    case MainScreenVC = "MainScreenVC"
     case DetailsVC = "DetailsVC"
 
  }
