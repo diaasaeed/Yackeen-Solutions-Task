@@ -35,6 +35,7 @@
 		01A506482776E633000FCC23 /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A506472776E633000FCC23 /* MainScreenRouter.swift */; };
 		01A5064D2776E640000FCC23 /* MainScreenProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5064C2776E640000FCC23 /* MainScreenProtocol.swift */; };
 		01A506532776E994000FCC23 /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A506522776E994000FCC23 /* MainScreenModel.swift */; };
+		01A5065C2776F047000FCC23 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5065B2776F047000FCC23 /* SplashVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		01A506472776E633000FCC23 /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
 		01A5064C2776E640000FCC23 /* MainScreenProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenProtocol.swift; sourceTree = "<group>"; };
 		01A506522776E994000FCC23 /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
+		01A5065B2776F047000FCC23 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 		01A5058A2776D8BC000FCC23 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				01A5065A2776F036000FCC23 /* Splash */,
 				01A506342776E5CD000FCC23 /* Main Screen */,
 			);
 			path = Scenes;
@@ -274,6 +277,14 @@
 				01A506522776E994000FCC23 /* MainScreenModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		01A5065A2776F036000FCC23 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				01A5065B2776F047000FCC23 /* SplashVC.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +422,7 @@
 				01A506362776E5F6000FCC23 /* MainScreenVC.swift in Sources */,
 				01A5061E2776DB29000FCC23 /* enums.swift in Sources */,
 				01A5062D2776DCA4000FCC23 /* API Request.swift in Sources */,
+				01A5065C2776F047000FCC23 /* SplashVC.swift in Sources */,
 				01A506212776DB29000FCC23 /* Protocols.swift in Sources */,
 				01A506432776E628000FCC23 /* MainScreenInteractor.swift in Sources */,
 				01A506202776DB29000FCC23 /* Images Helper.swift in Sources */,

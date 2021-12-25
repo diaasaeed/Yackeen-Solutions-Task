@@ -14,7 +14,8 @@ protocol MainScreenViewProtocol {
 
 protocol MainScreenPresenterProtocol {
     var view:MainScreenViewProtocol? {get set}
-    
+    func requestSearch(txt:String)
+
 }
 
 protocol MainScreenInteractorInputProtocol {

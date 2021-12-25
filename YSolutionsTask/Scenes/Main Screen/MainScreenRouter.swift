@@ -11,11 +11,11 @@ class MainScreenRouter{
     
     static func createModule()-> UIViewController{
         
-        let view = SetStoryBoard.controller(controller: Helper(Story: .Main, VC: .DetailsVC)) as! MainScreenVC
+        let view = SetStoryBoard.controller(controller: Helper(Story: .Main, VC: .MainScreenVC)) as! MainScreenVC
         let router = MainScreenRouter()
         let interactor = MainScreenInteractor()
         
-        let presenter = MainScreenPresenter(view: view, router: router, interactor: interactor)
+        let presenter = MainScreenPresenter(view: view, router: router, interactor: interactor,error: view)
         presenter.interactor = interactor
         presenter.router = router
         view.presenter = presenter

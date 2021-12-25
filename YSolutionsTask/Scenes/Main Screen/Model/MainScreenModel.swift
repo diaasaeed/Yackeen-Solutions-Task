@@ -18,19 +18,19 @@ struct Show: Codable {
     var url: String?
     var name: String?
     var type: String?
-    var language: Language?
+    var language: String?
     var genres: [String]?
     var status: String?
     var runtime: Int?
-    var averageRuntime: Int?
+    var averageRuntime: Double?
     var premiered, ended: String?
     var officialSite: String?
     var schedule: Schedule?
     var rating: Rating?
-    var weight: Int?
+    var weight: Double?
     var network, webChannel: Network?
     var dvdCountry: String?
-    var externals: Externals
+    var externals: Externals?
     var image: Image?
     var summary: String?
     var updated: Int?
@@ -44,7 +44,7 @@ struct Show: Codable {
 
 // MARK: - Externals
 struct Externals: Codable {
-    var tvrage, thetvdb: Int?
+    var tvrage, thetvdb: Double?
     var imdb: String?
 }
 
@@ -53,10 +53,7 @@ struct Image: Codable {
     var medium, original: String?
 }
 
-enum Language: String, Codable {
-    case english = "English"
-    case japanese = "Japanese"
-}
+
 
 // MARK: - Links
 struct Links: Codable {
@@ -87,7 +84,7 @@ struct Country: Codable {
 
 // MARK: - Rating
 struct Rating: Codable {
-    var average: Int?
+    var average: Double?
 }
 
 // MARK: - Schedule

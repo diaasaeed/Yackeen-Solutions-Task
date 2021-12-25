@@ -7,7 +7,9 @@
 
 import UIKit
 
-class MainScreenVC: UIViewController,MainScreenViewProtocol {
+class MainScreenVC: UIViewController,MainScreenViewProtocol,ErrorProtocol {
+
+    
     //MARK:- variable
     var presenter: MainScreenPresenterProtocol?
 
@@ -15,7 +17,8 @@ class MainScreenVC: UIViewController,MainScreenViewProtocol {
     //MARK: - view did load
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ 
+        self.presenter?.requestSearch(txt: "F")
 
     }    
  
@@ -25,5 +28,9 @@ class MainScreenVC: UIViewController,MainScreenViewProtocol {
          
     }
     
+    func featching(error: String) {
+        showAlert(withTitle: true, msg: error, compilition: nil)
+
+    }
 
 }
