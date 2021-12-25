@@ -83,11 +83,24 @@
                                     <outlet property="delegate" destination="2dV-PR-Tf0" id="OU9-uX-ahQ"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luu-iT-Uhh">
+                                <rect key="frame" x="20" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dCB-76-YhW"/>
+                                    <constraint firstAttribute="width" constant="30" id="q7e-Ts-rOz"/>
+                                </constraints>
+                                <state key="normal" image="arrow.backward.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="backBTN:" destination="2dV-PR-Tf0" eventType="touchUpInside" id="0mm-JA-25Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="efP-Di-36o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="luu-iT-Uhh" firstAttribute="leading" secondItem="efP-Di-36o" secondAttribute="leading" constant="20" id="M80-bY-7qS"/>
                             <constraint firstItem="efP-Di-36o" firstAttribute="bottom" secondItem="LC1-Mc-Hdw" secondAttribute="bottom" id="NLj-fg-Ev4"/>
+                            <constraint firstItem="luu-iT-Uhh" firstAttribute="top" secondItem="efP-Di-36o" secondAttribute="top" constant="20" id="NvV-ew-Uwy"/>
                             <constraint firstItem="efP-Di-36o" firstAttribute="trailing" secondItem="LC1-Mc-Hdw" secondAttribute="trailing" id="cGI-Of-9SF"/>
                             <constraint firstItem="LC1-Mc-Hdw" firstAttribute="top" secondItem="efP-Di-36o" secondAttribute="top" constant="10" id="eQ2-Br-SwR"/>
                             <constraint firstItem="LC1-Mc-Hdw" firstAttribute="leading" secondItem="efP-Di-36o" secondAttribute="leading" id="pNF-wg-R0d"/>
@@ -103,6 +116,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.backward.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

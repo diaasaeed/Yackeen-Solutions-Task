@@ -40,6 +40,12 @@ class ShowDetailsVC: UIViewController ,ShowDetailsViewProtocol,ErrorProtocol{
         
     }
  
+    //MARK: - actions
+    @IBAction func backBTN(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
     //MARK:- deleget
     func reloadData() {
         showDetailsTableView.reloadData()
